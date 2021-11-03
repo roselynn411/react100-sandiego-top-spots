@@ -17,30 +17,6 @@ export class App extends Component {
       .then(topspots => this.setState({ topspots })); 
    }
 
-   fetch('https://codepen.io/merobertsjr/pen/WayqqB', options)
-   .then(data => {
-       if (!data.ok) {
-         throw Error(data.status);
-        }
-        return data.json();
-       }).then(update => {
-       console.log(update);
-       // {
-       //
-       title: 'A blog post by Kingsley',
-       //
-       body: 'Brilliant post on fetch API',
-       //
-       userId: 1,
-       //
-       id: 101
-       // };
-       }).catch(e => {
-       console.log(e);
-       });
-
-
-
 
   render() {
     return (
